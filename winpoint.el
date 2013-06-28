@@ -105,7 +105,8 @@ If any window isn't shown anymore, forget about it."
   "Restore point in the window WIN."
   (with-selected-window win
     (let ((point (winpoint-get win (current-buffer))))
-      (when point
+      (when (and point
+                 (not eq major-mode `dired-mode))
         (goto-char point)))))
 
 ;;;;;;;;;;;;;;;;

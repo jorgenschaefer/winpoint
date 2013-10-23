@@ -6,4 +6,4 @@ the other window, not as it was before we switched away. This mode
 tries to work around this problem by storing and restoring per-window
 positions for each buffer.
 
-To enable this, just run `(window-point-remember-mode 1)`
+To enable this, just run `(winpoint-mode 1)`

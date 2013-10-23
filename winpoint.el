@@ -1,11 +1,11 @@
 ;;; winpoint.el --- Remember buffer positions per-window, not per buffer
 
-;; Copyright (C) 2006  Jorgen Schaefer
+;; Copyright (C) 2006, 2012  Jorgen Schaefer
 
-;; Version: 1.2
-;; Keywords: convenience
+;; Version: 1.4
 ;; Author: Jorgen Schaefer <forcer@forcix.cx>
-;; URL: http://www.emacswiki.org/cgi-bin/emacs/download/winpoint.el
+;; URL: https://github.com/jorgenschaefer/winpoint
+;; Keywords: convenience
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
@@ -30,7 +30,7 @@
 ;; This mode tries to work around this problem by storing and
 ;; restoring per-window positions for each buffer.
 
-;; To enable this, just run (window-point-remember-mode 1)
+;; To enable this, just run (winpoint-mode 1)
 
 ;;; Code:
 
@@ -45,7 +45,9 @@ This is an alist mapping windows to an alist mapping buffers to
 their stored point marker.")
 (make-variable-frame-local 'winpoint-frame-positions)
 
+;;;###autoload
 (defalias 'window-point-remember-mode 'winpoint-mode)
+;;;###autoload
 (define-minor-mode winpoint-mode
   "Remember positions in a buffer per-window, not per-buffer.
 That is, when you have the same buffer open in two different

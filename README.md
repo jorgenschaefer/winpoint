@@ -1,3 +1,9 @@
+# Obsolete
+
+This library is fully replaced by the variable
+`switch-to-buffer-preserve-window-point`, introduced in Emacs 24.3.
+
+
 # winpoint.el, an Emacs library to remember buffer positions per window, not per buffer
 
 When two windows view the same buffer at the same time, and one window
